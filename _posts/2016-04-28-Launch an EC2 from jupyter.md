@@ -24,7 +24,7 @@ In order to follow this tutorial you will need :
 - An AWS account
 - In a folder the following files:
   - root key.csv : a file containing your aws credentials
-  - ​
+  - LaunchEC2.ipynb : the jupyter notebook that pilot the activity
 
 
 ### The Jupyter Notebook
