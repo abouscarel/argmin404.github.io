@@ -9,7 +9,7 @@
 
 # If you are building a GitHub project page then use these settings:
 url: "http://argmin404.github.io/"
-baseurl: "/"
+baseurl: "http://argmin404.github.io/"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -29,12 +29,11 @@ avatar: "/img/avatar-icon.png"
 # List of links in the navigation bar
 navbar-links:
   Home: ""
-  Categories: ""
   Resources:
     - Getting started: "getstarted"
     - Featured users: "featured-users"
     - Project page: "https://github.com/daattali/beautiful-jekyll#readme"
-  About me: "http://deanattali.com"
+  About me: "#"
 
 # --- Footer options --- #
 
@@ -52,9 +51,9 @@ author:
 # Select which links to show in the footer
 footer-links-active:
   rss: false
-  facebook: true
+  facebook: false
   email: true
-  twitter: true
+  twitter: false
   github: true
   linkedin: false
   stackoverflow: false
