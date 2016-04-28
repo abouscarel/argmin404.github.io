@@ -41,8 +41,6 @@ In the previous section did not only installed python it also installed 'pip' wh
 pip install jupyter
 ```
 
-
-
 ###  Step3 : Configure the python kernel
 
 Jupyter notebook works with kernel, it can be quite a mess to properly configure them. The working environment I use on a daily basis contains three kernels : py2, py3, pySpark, these kernels covers the two versions of python and a stable version of spark (we will discuss in another article how to properly setup it). The main advantages of such an environment is that you can have a repo or a folder with all your notebooks that can be in version 2 in version 3 etc. The idea is that upon creation of your notebook you will define the kernel it linked to (this kernel can then easily be changed); when you come back on the notebook it will automatically be open with the proper kernel. 
@@ -89,7 +87,9 @@ jupyter notebook
 You then need to go on your internet browser and to : http://localhost:8888/
 
 You should have a window like this: 
-![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_jupyter1_png.png?raw=true = 10x)Install a library
+![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_jupyter1_png.png?raw=true)
+
+Install a library
 Let's say you want to install the library pandas on your python2 kernel you will need to do : 
 
 ```shell
