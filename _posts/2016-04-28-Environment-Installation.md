@@ -88,7 +88,7 @@ jupyter notebook
 
 You should have a window like this: 
 
-![](Pic/1_jupyter1.tiff)
+![](Pic/1_jupyter1_png.png)
 
 ##### Install a library
 
