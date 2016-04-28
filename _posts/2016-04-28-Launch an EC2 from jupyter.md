@@ -1,7 +1,7 @@
 ---
 layout : post
-title : Environment Installation
-subtitle : Launch your EC2 with Jupyter
+title : How to create and setup an EC2 instance with Jupyter
+subtitle : The easiest way to launch an amazon EC2 and to run your python code
 ---
 
 ### Introduction and Workflow
