@@ -22,15 +22,34 @@ In order to follow this tutorial you will need :
 
 - Jupyter Notebook with a python2 kernel and a python3 kernel
 - An AWS account
+- In a folder the following files:
+  - root key.csv : a file containing your aws credentials
+  - ​
 
-### Jupyter Notebook
+
+### The Jupyter Notebook
 
 As explained above the jupyter notebook leads to the creation of the VM and to sending the proper files on it. In our case it will send 
 
 - install.sh : a bash file that performs all the installation
 - main.py : the main script that in this case reads from the S3 and save into it
+- In a folder the following files:
+  - rootkey.csv 
 
 
 
 
+Let's look deeper into the code : 
+
+##### Library Loading
+
+```python
+import boto
+from boto.manage.cmdshell import sshclient_from_instance
+import time
+import pandas as pd
+import os
+```
+
+**Boto** is the key library here, it is the one that makes the connection between your EC2 and your notebook. You don't have to understand more than that.
 
