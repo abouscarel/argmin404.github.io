@@ -89,7 +89,7 @@ jupyter notebook
 You then need to go on your internet browser and to : http://localhost:8888/
 
 You should have a window like this: 
-![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_jupyter1_png.png?raw=true = 100x)Install a library
+![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_jupyter1_png.png?raw=true = 10x)Install a library
 Let's say you want to install the library pandas on your python2 kernel you will need to do : 
 
 ```shell
