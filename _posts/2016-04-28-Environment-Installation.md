@@ -86,6 +86,10 @@ In order to launch jupyter you simply need to do :
 jupyter notebook
 ```
 
+You should have a window like this: 
+
+![](Pic/1_jupyter1.tiff)
+
 ##### Install a library
 
 Let's say you want to install the library pandas on your python2 kernel you will need to do : 
