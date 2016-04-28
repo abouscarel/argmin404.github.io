@@ -33,10 +33,6 @@ As explained above the jupyter notebook leads to the creation of the VM and to s
 
 - install.sh : a bash file that performs all the installation
 - main.py : the main script that in this case reads from the S3 and save into it
-- In a folder the following files:
-  - rootkey.csv 
-
-
 
 
 Let's look deeper into the code : 
@@ -52,4 +48,15 @@ import os
 ```
 
 **Boto** is the key library here, it is the one that makes the connection between your EC2 and your notebook. You don't have to understand more than that.
+
+##### Connection to EC2
+
+```python
+ec2 = boto.connect_ec2(aws_access_key_id=access.loc[0,1], 
+                       aws_secret_access_key=access.loc[1,1])
+```
+
+In these two lines you make the bridge to the EC2 by giving your aws access key id and your aws secret access key.
+
+
 
