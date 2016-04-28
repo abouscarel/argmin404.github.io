@@ -9,7 +9,7 @@
 
 # If you are building a GitHub project page then use these settings:
 url: "http://argmin404.github.io/"
-baseurl: "http://argmin404.github.io/"
+baseurl: "http://argmin404.github.io"
 
 # Of course don't forget to change the username and projectname to YOUR username and project
 
@@ -65,7 +65,7 @@ url-pretty: "deanattali.com/beautiful-jekyll"  # eg. "deanattali.com/beautiful-j
 # --- Misc --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "argmin(404)"
+disqus: "argmin404"
 
 # Fill in your Google Analytics ID to track your website using GA
 google_analytics: "UA-52604926-4"
