@@ -352,6 +352,7 @@ footer .theme-by {
   transition: opacity 1s linear;
 }
 .intro-header .page-heading {
+  margin-top: 30px;
   text-align: center;
 }
 .intro-header.big-img .page-heading,
