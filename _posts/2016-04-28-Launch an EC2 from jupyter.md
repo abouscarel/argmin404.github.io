@@ -22,6 +22,10 @@ EC2 is no joke, it is linked to your credit card and you should be very very ver
 
 ### Requirements
 
+Here is the git folder with the files : 
+
+https://github.com/argmin404/argmin404.github.io/tree/master/Jupyter%20Notebook%20and%20Files/LaunchEC2
+
 In order to follow this tutorial you will need :
 
 - Jupyter Notebook with a python2 kernel and a python3 kernel
