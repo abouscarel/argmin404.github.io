@@ -1,6 +1,6 @@
 ---
 layout : post
-title : How to create and setup an EC2 instance with Jupyter
+title : How to create and setup an EC2 instance directly from your Jupyter notebook
 subtitle : The easiest way to launch an amazon EC2 and to run your python code
 ---
 
@@ -15,6 +15,10 @@ After a lot of research I was finally able to produce a jupyter notebook that ca
 3. [ssh] Install all the necessary softwares and libraries
 4. [ssh] Run your python script - that will save the results in your S3
 5. [jupyter notebook] Close the EC
+
+#### CAREFUL
+
+EC2 is no joke, it is linked to your credit card and you should be very very very cautious with your credentials (AWS secret key and ID). You will see later in this tutorial that you need to setup a file "root key.csv" where lies these informations, **do not share them**. When I was experiencing with this technology I pushed by mistakes on my git this file, 1 min later I had 80 big servers running on amazon for a total cost of 180$/hours, fortunately I was able to quickly call amazon and settle this issue, but be really careful with this. 
 
 ### Requirements
 
@@ -37,7 +41,7 @@ As explained above the jupyter notebook leads to the creation of the VM and to s
 
 Let's look deeper into the code : 
 
-##### Library Loading
+#### Library Loading
 
 ```python
 import boto
@@ -49,7 +53,7 @@ import os
 
 **Boto** is the key library here, it is the one that makes the connection between your EC2 and your notebook. You don't have to understand more than that.
 
-##### Connection to EC2
+#### Connection to EC2
 
 ```python
 ec2 = boto.connect_ec2(aws_access_key_id=access.loc[0,1], 
@@ -58,5 +62,51 @@ ec2 = boto.connect_ec2(aws_access_key_id=access.loc[0,1],
 
 In these two lines you make the bridge to the EC2 by giving your aws access key id and your aws secret access key.
 
+#### Access your current instances 
 
+```python
+reservations = ec2.get_all_instances()
+instance = reservations[0].instances[0]
+```
 
+These lines simply get all your running instances, if **you don't have any instance running** this will cause **an error** you will need these lines in a very specific situation : you closed your python kernel, then re-opened it again and you want to close your EC2 from your notebook. 
+
+#### SSH Mapping
+
+In order to be able to access your amazon machine and push file you need to create a proper ssh key and link it to your AWS, the next few lines do it for you : 
+
+```python
+key_pair = ec2.create_key_pair('aws-key')
+key_pair.save('~/.ssh')
+group = ec2.create_security_group('root', 'A group that allows SSH access')
+group.authorize('tcp', 22, 22, '0.0.0.0/0') # to properly authorize ssh
+```
+
+**NB**: the first two lines of code only work on python2 (for some reasons), if you only have python3 you can create the key using the following lines in your shell (then follow the instruction): 
+
+```shell
+ssh-keygen -t rsa -f ~/.ssh/aws-key
+```
+
+#### Run the Instance
+
+This is the turning point, these few lines actually run the instance. The usual approach I suggest is to first use a *t2.micro* instance to make sure everything works and then run on a bigger one. 
+
+```python
+## Running a classical Amazon t2.micro Linux Instance
+reservation = ec2.run_instances(image_id='ami-60b6c60a', 
+                                key_name='aws-key', 
+                                instance_type = 't2.micro',
+                                security_groups = ['root'])
+
+instance = reservation.instances[0]
+print('waiting for instance')
+while instance.state != 'running':
+    #print ('.', end = "")
+    print('.'),
+    time.sleep(5)
+    instance.update()
+print('done')
+```
+
+**To change the instance**, you simply need to change the argument *t2.micro* for something else, I strongly suggest to use the amazon machines. You can look into this table to see the list of the available instances : https://aws.amazon.com/fr/ec2/instance-types/. 
