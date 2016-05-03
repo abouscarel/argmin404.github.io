@@ -24,9 +24,7 @@ EC2 is no joke, it is linked to your credit card and you should be very very ver
 
 Here is the git folder with the files : 
 
-[test](https://github.com/argmin404/argmin404.github.io/tree/master/Jupyter%20Notebook%20and%20Files/LaunchEC2)
-
-https://github.com/argmin404/argmin404.github.io/tree/master/Jupyter%20Notebook%20and%20Files/LaunchEC2
+[Link To Git Folder](https://github.com/argmin404/argmin404.github.io/tree/master/Jupyter%20Notebook%20and%20Files/LaunchEC2)
 
 In order to follow this tutorial you will need :
 
@@ -115,4 +113,4 @@ while instance.state != 'running':
 print('done')
 ```
 
-**To change the instance**, you simply need to change the argument *t2.micro* for something else, I strongly suggest to use the amazon machines. You can look into this table to see the list of the available instances : https://aws.amazon.com/fr/ec2/instance-types/. 
+**To change the instance**, you simply need to change the argument *t2.micro* for something else, I strongly suggest to use the amazon machines. You can look into this table to see the list of the available instances : [Amazon Doc](https://aws.amazon.com/fr/ec2/instance-types/.)
