@@ -50,7 +50,7 @@ In order to follow this tutorial you will need :
 
    ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2Security.png?raw=true)
 
-3. Click on Continue with security ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/Pic/2_ec2ContinueSecurity.png?raw=true)
+3. Click on Continue with security ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2ContinueSecurity.png?raw=true)
 
 4. Click on Create New Access Key
 
