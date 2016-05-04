@@ -19,13 +19,13 @@ After a lot of research I was finally able to produce a jupyter notebook that ca
 1. [jupyter notebook] Transfer the proper files and scripts including the install.sh 
 2. [ssh] Install all the necessary softwares and libraries
 3. [ssh] Run your python script - that will save the results in your S3
-4. [jupyter notebook] Close the EC
+4. [jupyter notebook] Close the EC2
 
 
 
 #### CAREFUL
 
-EC2 is no joke, it is linked to your credit card and you should be very very very cautious with your credentials (AWS secret key and ID). You will see later in this tutorial that you need to setup a file "root key.csv" where lies these informations, **do not share them**. When I was experiencing with this technology I pushed by mistakes on my git this file, 1 min later I had 80 big servers running on amazon for a total cost of 180$/hours, fortunately I was able to quickly call amazon and settle this issue, but be really careful with this. 
+EC2 is no joke, it is linked to your credit card and you should be very very very cautious with your credentials (AWS secret key and ID). You will see later in this tutorial that you need to setup a file "root key.csv" where lies these informations, **do not share it**. When I was experiencing with this technology I pushed by mistakes on my git this file, 1 min later I had 80 big servers running on amazon for a total cost of 180$/hours, fortunately I was able to quickly call amazon and settle this issue, but be really careful with this. 
 
 ### Requirements
 
@@ -56,15 +56,13 @@ In order to follow this tutorial you will need :
 
    ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2CreateNewAccessKey.png?raw=true)
 
+   Then follow the instruction until you get to download the csv. 
+
+   **DO NOT SHARE THIS CSV WITH ANYBODY !!!!!!!!**
+
 ### The Jupyter Notebook
 
-As explained above the jupyter notebook leads to the creation of the VM and to sending the proper files on it. In our case it will send 
-
-- install.sh : a bash file that performs all the installation
-- main.py : the main script that in this case reads from the S3 and save into it
-
-
-Let's look deeper into the code : 
+As explained above the jupyter notebook leads to the creation of the VM, Let's look deeper into the code : 
 
 #### Library Loading
 
@@ -142,7 +140,7 @@ print('done')
 
 You should see  :
 
-![](Pic/2_ec2launch.png)
+![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2launch.png?raw=true)
 
 #### Connect to the instance
 
@@ -152,7 +150,7 @@ You now have your instance running ! You're now probably eager to connect to it.
 
 2. Click on the EC2 Icon![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2AWS.png?raw=true)
 
-3. Click on "Instances" on the left ![](Pic/2_ec2Instances.png)
+3. Click on "Instances" on the left ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2Instances.png?raw=true)
 
 4. You should have screen like, if you don't you might have to change the region on the top right (N.Virginia in my case), just loop through the one available until you find an instance running.
 
@@ -190,4 +188,8 @@ You now have your instance running ! You're now probably eager to connect to it.
 
     ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2Welcome.png?raw=true)
 
-Congratulation you are now fully connected to your ec2. However this is not where it ends, next steps will consist in being able to transfer file to the server, to link it to your S3 bucket, make the proper installation and properly run a python script. 
+Congratulation you are now fully connected to your ec2. However this is not where it ends, next steps (article) will consist in being able to transfer file to the server, to link it to your S3 bucket, make the proper installation and properly run a python script. 
+
+
+
+**The next article is under construction, meanwhile do not forget to close your instance from your was console**

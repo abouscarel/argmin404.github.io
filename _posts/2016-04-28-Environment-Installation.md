@@ -76,9 +76,9 @@ echo "alias kernel3='source ~/py3_kernel/bin/activate'" >> ~/.bash_profile
 
 ### Step4 : Usage 
 
-##### Run a notebook
+##### Create / Run a notebook
 
-In order to launch jupyter you simply need to do :
+In order to launch jupyter you simply need to run the following command in your terminal (you may first want to navigate to your work folder using ) *cd*:
 
 ```shell
 jupyter notebook
@@ -89,7 +89,12 @@ You then need to go on your internet browser and to : http://localhost:8888/
 You should have a window like this: 
 ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_jupyter1_png.png?raw=true)
 
-Install a library
+Click on "new" on the top right corner to launch a new notebook, you should see a list of your available kernels (py2, and py3 if you followed the tutorial)
+
+![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/Pic/1_Notebooks.png?raw=true)
+
+##### Install a library
+
 Let's say you want to install the library pandas on your python2 kernel you will need to do : 
 
 ```shell
@@ -103,8 +108,4 @@ Obviously if you want to install a library on the python3 kernel you will need t
 kernel3
 pip install pandas
 ```
-
-
-
-
 
