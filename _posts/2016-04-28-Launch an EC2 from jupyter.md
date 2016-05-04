@@ -156,7 +156,7 @@ You now have your instance running ! You're now probably eager to connect to it.
 
    ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2Dashboard.png?raw=true)
 
-5. Click on **connect** at the top of the screen ![](Pic/2_ec2connect.png)
+5. Click on **connect** at the top of the screen ![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/2_ec2connect.png?raw=true)
 
 6. A window similar to this should appear :
 
