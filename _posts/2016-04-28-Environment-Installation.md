@@ -91,7 +91,7 @@ You should have a window like this:
 
 Click on "new" on the top right corner to launch a new notebook, you should see a list of your available kernels (py2, and py3 if you followed the tutorial)
 
-![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/Pic/1_Notebooks.png?raw=true)
+![](https://github.com/argmin404/argmin404.github.io/blob/master/_posts/Pic/1_Notebooks.png?raw=true)
 
 ##### Install a library
 
